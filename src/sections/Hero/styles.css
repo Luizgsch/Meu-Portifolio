@@ -1,0 +1,138 @@
+.hero-section {
+  height: 100vh;
+  padding: var(--container-padding);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* Fundo escuro profundo com gradiente radial para profundidade */
+  background: radial-gradient(circle at center, #1A1A1A 0%, #0D0D0D 100%);
+}
+
+
+.hero-container-split {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1.2;
+  z-index: 10;
+  padding-right: 50px;
+}
+
+.hero-visual {
+  flex: 0.8;
+  height: 100vh; 
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container do Grid de Partículas */
+.particle-grid-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: crosshair;
+  position: relative; /* Adicionado para posicionamento absoluto dos pontos */
+}
+
+/* Wrapper centralizado para os pontos */
+.particle-grid-wrapper {
+  position: absolute; /* Posicionamento absoluto em relação ao container */
+  top: 50%; /* Alinha o topo do wrapper ao centro vertical do container */
+  left: 50%; /* Alinha a esquerda do wrapper ao centro horizontal do container */
+  transform: translate(-50%, -50%); /* Ajusta o wrapper para que seu próprio centro fique no centro do container */
+  width: 1px; /* Os pontos usam x/y relativos ao centro */
+  height: 1px;
+}
+
+/* Grid de Partículas */
+.particle-grid {
+  position: relative;
+  width: 450px; /* GRID_SIZE * DOT_SPACING aproximadamente */
+  height: 450px;
+}
+
+/* Ponto do Grid */
+.grid-dot {
+  position: absolute; /* Posicionamento absoluto dentro do wrapper */
+  width: 3px; /* Levemente menores para elegância */
+  height: 3px;
+  background-color: var(--color-text-primary);
+  border-radius: 50%;
+  /* Efeito de brilho suave (glow) */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%); /* Centraliza o ponto na sua coordenada X/Y */
+  will-change: transform, opacity; /* Otimização para animações de transform e opacity */
+}
+
+
+
+
+.hero-detail {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.25em;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 5.5rem;
+  margin-bottom: 3.5rem;
+  color: var(--color-text-primary);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-container-split {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding-right: 0;
+    order: 2;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 40vh;
+    order: 1;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+
+
