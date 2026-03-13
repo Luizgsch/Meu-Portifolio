@@ -1,9 +1,9 @@
 .about-section {
   padding: 120px 8%;
-  background-color: var(--color-bg);
+  background: linear-gradient(to bottom, #0D0D0D 0%, #121212 50%, #0D0D0D 100%);
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .about-container {

@@ -48,8 +48,15 @@ export const Hero = () => {
             Trazendo performace <br /> e qualidade <br /> para o seu software.
           </h1>
           <div className="hero-actions">
-            <Button label="Ver Projetos" onClick={() => window.location.href = '#works'} />
-            <Button label="Fale Comigo" variant="outline" onClick={() => window.location.href = '#contact'} />
+            <Button 
+              label="Ver Projetos" 
+              onClick={() => document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' })} 
+            />
+            <Button 
+              label="Fale Comigo" 
+              variant="outline" 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
+            />
           </div>
         </div>
 
